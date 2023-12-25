@@ -1,5 +1,17 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
 body{
     font-size: 16px;
     font-family: Consolas;
-    background-color: brown;
+    background-color: #f1f1f1;
+    border: 1px solid;
+}
+.header{
+    display: flex;
+    flex-flow: row wrap-reverse;
+}
+.footer-text{
+    text-align: center;
 }

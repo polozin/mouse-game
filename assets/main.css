@@ -9,9 +9,43 @@ body{
     border: 1px solid;
 }
 .header{
+    padding: 16px;
+}
+.header-content{
     display: flex;
-    flex-flow: row wrap-reverse;
+    justify-content: flex-end;
+
+}
+.decor{
+    width: 100%;
+    height: 2px;
+    border-bottom: solid 1px maroon;
+}
+.test{
+    padding: 16px;
+    border: solid 1px red;
+    border-radius: 3px;
+}
+.header-tool{
+    display: inline;
+}
+.container{
+    height: 100%;
+    display: flex;
+   flex-direction: column;
+}
+.footer{
+    padding: 16px;
+
 }
 .footer-text{
     text-align: center;
+}
+.content{
+   flex-grow: 3;
+}
+.hole{
+    height: 10vh;
+    width: 12vw;
+    background-color: maroon;
 }

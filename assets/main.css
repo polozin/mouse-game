@@ -48,4 +48,11 @@ body{
     height: 10vh;
     width: 12vw;
     background-color: maroon;
+    display: flex;
+    flex-direction: column-reverse;
+    align-self: center;
+}
+.hole-line{
+    height: 1vh;
+    background-color: gray;
 }

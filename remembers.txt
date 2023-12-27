@@ -1,2 +1,7 @@
 create new branch from current.
 git checkout -b name-new-branch
+
+concat to main branch
+git rebase name-master
+git push
+in github pull request

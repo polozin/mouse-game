@@ -47,7 +47,6 @@ body{
 .hole{
     height: 100px;
     width: 200px;
-    background-color: darkgreen;
    background: url("/assets/images/hole.png") no-repeat  0 100px ;
     animation-name: testmove;
     animation-duration: 1s;

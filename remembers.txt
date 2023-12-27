@@ -1,0 +1,2 @@
+create new branch from current.
+git checkout -b name-new-branch

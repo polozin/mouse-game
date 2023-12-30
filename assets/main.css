@@ -73,7 +73,10 @@ body {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
+.fly{
+   position: absolute;
 
+}
 @keyframes testmove {
     from {
         background-position: 0 100px;

@@ -5,7 +5,6 @@ const COUNT_HOLES = 6;
 const MAXIMUM_INCREMENT = 10000;
 let cells =  initArrayCells();
 let holsPositions = [];
-const rootElement = document.querySelector('#cells-box');
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -14,6 +13,7 @@ function getRandomInt(min, max) {
 }
 
 function initCells() {
+    const rootElement = document.querySelector('#cells-box');
     rootElement.innerHTML = '';
     holsPositions = [];
     for (let i = 0, increment = 0; i < COUNT_HOLES; i++, increment++) {
@@ -39,20 +39,27 @@ function initCells() {
         }
         cellElement.setAttribute('class', className);
         rootElement.appendChild(cellElement);
-        cells[i].offset.left = cellElement.offsetLeft;
-        cells[i].offset.top = cellElement.offsetTop;
+        cells[i].offsetLeft = cellElement.offsetLeft;
+        cells[i].offsetTop = cellElement.offsetTop;
        // console.log('offset', "left", cellElement.offsetLeft, "top", cellElement.offsetTop);
     }
     let flyElement = document.createElement('img');
     flyElement.src = '../assets/images/fly.png';
-    flyElement.offsetTop = cells[0].offset.top;
+    flyElement.offsetTop = cells[0].offsetTop;
     flyElement.offsetLeft = cells[0].offsetLeft;
     flyElement.setAttribute('class', 'fly');
     rootElement.appendChild(flyElement);
 
 }
 function initArrayCells() {
-    return Array(COUNT_CELLS).fill({type: TYPE_CELL, offset: {left: 0, top: 0}});
+
+    return  Array(COUNT_CELLS).fill().map( ()=> {  return {
+        type: 0,
+        offsetLeft: 0,
+        offsetTop:0
+    } });
+
+
 }
 
 
